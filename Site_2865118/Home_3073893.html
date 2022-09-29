@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Currency Recognition System using Image Processing​Sahithi Babulgama"><meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="np://app.desktop.nicepage.com/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="np://app.desktop.nicepage.com/nicepage.js" defer=""></script>
+<meta name="generator" content="Nicepage 4.18.5, nicepage.com"></head>
+<body class="u-body u-xl-mode" data-style="blank" data-posts="" data-global-section-properties="{&quot;colorings&quot;:{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}}" data-source="blank" data-lang="en" data-page-sections-style="[]" data-page-coloring-types="{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}" data-page-category="&quot;Basic&quot;"><section class="u-carousel u-slide u-block-2111-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="carousel_de9b" data-source="Blank" data-id="2111" data-interval="5000" data-u-ride="carousel">
+      <ol class="u-absolute-hcenter u-carousel-indicators u-block-2111-2">
+        
+      <li data-u-target="#carousel_de9b" class="u-active u-grey-30" data-u-slide-to="0"></li></ol>
+      <div class="u-carousel-inner" role="listbox">
+      <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-block-d15d-1" custom-posts-hash="[I,T]" data-state="{&quot;min-height&quot;:{&quot;canCollapse&quot;:{&quot;XL&quot;:null,&quot;LG&quot;:null,&quot;MD&quot;:null,&quot;SM&quot;:null,&quot;XS&quot;:null}}}" src="" data-brightness="40" data-post-id="685123684" data-image-width="682" data-image-height="511" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:false}" data-id="d15d" data-posts-content="[{'images':[[1300,800]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':800,'id':1,'headingProp':'title','textProp':'largeText'}]" data-style="intro-center-image-dark-1" data-source="Sketch"><div class="u-clearfix u-sheet u-block-d15d-2">
+    <h1 class="u-text u-text-default u-title u-block-d15d-3">Currency Recognition System using Image Processing</h1>
+    
+  <p class="u-text u-text-default u-block-d15d-4">​&nbsp;<span style="font-size: 1.25rem;">The topic of this tutorial is currency recognition. Here, we propose a system for automated currency recognition using image processing techniques. The proposed method can be used for recognizing both the country or origin as well as the denomination or value of a given banknote. Only paper currencies have been considered. This method works by first identifying the country of origin using certain predefined areas of interest, and then extracting the denomination value using characteristics such as size, color, or text on the note, depending on how much the notes within the same country differ.</span></p></div><style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-d15d-1 {
+    background-image: linear-gradient(0deg, rgba(var(--black-r),var(--black-g),var(--black-b),0.4), rgba(var(--black-r),var(--black-g),var(--black-b),0.4)), url("np://user.desktop.nicepage.com/Site_2865118/images/3073893-0.jpeg?rand=dbe4");
+    background-position: 50% 50%;
+  }
+  .u-block-d15d-2 {
+    min-height: 800px;
+  }
+  .u-block-d15d-3 {
+    font-size: 4.5rem;
+    margin-top: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-d15d-4 {
+    margin-top: 37px;
+    margin-right: -20px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-d15d-1 {
+    background-position: 50% 50%;
+    background-image: linear-gradient(0deg, rgba(var(--black-r),var(--black-g),var(--black-b),0.4), rgba(var(--black-r),var(--black-g),var(--black-b),0.4)), url("np://user.desktop.nicepage.com/Site_2865118/images/3073893-0.jpeg?rand=dbe4");
+  }
+  .u-block-d15d-2 {
+    min-height: 660px;
+  }
+  .u-block-d15d-3 {
+    margin-top: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 4.5rem;
+  }
+  .u-block-d15d-4 {
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: -20px;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="MD" data-visited="true">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-d15d-1 {
+    background-position: 50% 50%;
+    background-image: linear-gradient(0deg, rgba(var(--black-r),var(--black-g),var(--black-b),0.4), rgba(var(--black-r),var(--black-g),var(--black-b),0.4)), url("np://user.desktop.nicepage.com/Site_2865118/images/3073893-0.jpeg?rand=dbe4");
+  }
+  .u-block-d15d-2 {
+    min-height: 506px;
+  }
+  .u-block-d15d-3 {
+    font-size: 4.5rem;
+    margin-top: 290px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 29px;
+  }
+  .u-block-d15d-4 {
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: -20px;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="SM" data-visited="true">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-d15d-1 {
+    background-position: 50% 50%;
+    background-image: linear-gradient(0deg, rgba(var(--black-r),var(--black-g),var(--black-b),0.4), rgba(var(--black-r),var(--black-g),var(--black-b),0.4)), url("np://user.desktop.nicepage.com/Site_2865118/images/3073893-0.jpeg?rand=dbe4");
+  }
+  .u-block-d15d-2 {
+    min-height: 380px;
+  }
+  .u-block-d15d-3 {
+    font-size: 3rem;
+    margin-top: 290px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 18px;
+  }
+  .u-block-d15d-4 {
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: -20px;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="XS" data-visited="true">@media (max-width: 575px) {
+  .u-block-d15d-1 {
+    background-position: 50% 50%;
+    background-image: linear-gradient(0deg, rgba(var(--black-r),var(--black-g),var(--black-b),0.4), rgba(var(--black-r),var(--black-g),var(--black-b),0.4)), url("np://user.desktop.nicepage.com/Site_2865118/images/3073893-0.jpeg?rand=dbe4");
+  }
+  .u-block-d15d-2 {
+    min-height: 239px;
+  }
+  .u-block-d15d-3 {
+    font-size: 2.75rem;
+    margin-top: 290px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 23px;
+  }
+  .u-block-d15d-4 {
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: -20px;
+    margin-bottom: 60px;
+  }
+}</style></div></div>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-2111-3" href="#carousel_de9b" role="button" data-u-slide="prev">
+        <span aria-hidden="true">
+            <svg class="u-svg-link" viewBox="0 0 477.175 477.175">
+                <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path>
+            </svg>
+        </span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-2111-4" href="#carousel_de9b" role="button" data-u-slide="next">
+        <span aria-hidden="true">
+            <svg class="u-svg-link" viewBox="0 0 477.175 477.175">
+                <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path>
+            </svg>
+        </span>
+        <span class="sr-only">Next</span>
+      </a>
+    <style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-2111-2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .u-block-2111-3 {
+    position: absolute;
+    left: 0;
+  }
+  .u-block-2111-4 {
+    position: absolute;
+    right: 0;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-2111-2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .u-block-2111-3 {
+    position: absolute;
+    left: 0;
+  }
+  .u-block-2111-4 {
+    position: absolute;
+    right: 0;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-2111-2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .u-block-2111-3 {
+    position: absolute;
+    left: 0;
+  }
+  .u-block-2111-4 {
+    position: absolute;
+    right: 0;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-2111-2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .u-block-2111-3 {
+    position: absolute;
+    left: 0;
+  }
+  .u-block-2111-4 {
+    position: absolute;
+    right: 0;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-2111-2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .u-block-2111-3 {
+    position: absolute;
+    left: 0;
+  }
+  .u-block-2111-4 {
+    position: absolute;
+    right: 0;
+  }
+}</style></section><section class="u-clearfix u-image u-block-98ad-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-12fe" data-source="Blank" data-id="98ad" data-image-width="1024" data-image-height="775">
+  <div class="u-clearfix u-sheet u-block-98ad-2"><h1 class="u-text u-text-default u-block-98ad-3">Problem</h1><p class="u-text u-text-default u-block-98ad-4">​&nbsp;<span style="font-size: 1.25rem;">The currency recognition techniques were initially using some pattern, or texture or any other feature to recognize currency notes. These techniques require a user to always carry a machine along with him/her. Also these machines consume a lot of power. Hence, some currency recognition technique was needed which can overcome these shortcomings. The recognition technique discussed in this report does not require the image to have the exact size as that of the currency note. It also takes a single image to determine the currency.</span></p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-98ad-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/problem-solution-1024x775.jpg?rand=e8e2");
+    background-position: 50% 50%;
+  }
+  .u-block-98ad-2 {
+    min-height: 954px;
+  }
+  .u-block-98ad-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-98ad-4 {
+    margin-top: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-98ad-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/problem-solution-1024x775.jpg?rand=e8e2");
+    background-position: 50% 50%;
+  }
+  .u-block-98ad-2 {
+    min-height: 787px;
+  }
+  .u-block-98ad-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-98ad-4 {
+    margin-top: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-98ad-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/problem-solution-1024x775.jpg?rand=e8e2");
+    background-position: 50% 50%;
+  }
+  .u-block-98ad-2 {
+    min-height: 603px;
+  }
+  .u-block-98ad-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-98ad-4 {
+    margin-top: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-98ad-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/problem-solution-1024x775.jpg?rand=e8e2");
+    background-position: 50% 50%;
+  }
+  .u-block-98ad-2 {
+    min-height: 452px;
+  }
+  .u-block-98ad-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-98ad-4 {
+    margin-top: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-98ad-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/problem-solution-1024x775.jpg?rand=e8e2");
+    background-position: 50% 50%;
+  }
+  .u-block-98ad-2 {
+    min-height: 285px;
+  }
+  .u-block-98ad-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-98ad-4 {
+    margin-top: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style></section><section class="u-clearfix u-image u-block-6fa2-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-50d1" data-source="Blank" data-id="6fa2" data-image-width="1440" data-image-height="930">
+  <div class="u-clearfix u-sheet u-block-6fa2-2"><h1 class="u-text u-text-default u-block-6fa2-3">Sensor</h1><p class="u-text u-text-default u-block-6fa2-4">​<span style="font-size: 1.25rem;">​M</span><span style="font-size: 1.25rem;">ost of the sensors were contact image sensors. These sensors can capture color or black and white images. The captured image undergoes preprocessing. The preprocessed image undergoes feature extraction for efficient classification​</span></p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-6fa2-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/1440x930_PSC-IR-Carousel_Semiconductor2.jpg?rand=7c38");
+    background-position: 50% 50%;
+  }
+  .u-block-6fa2-2 {
+    min-height: 673px;
+  }
+  .u-block-6fa2-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6fa2-4 {
+    margin-top: 410px;
+    margin-right: -17px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-6fa2-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/1440x930_PSC-IR-Carousel_Semiconductor2.jpg?rand=7c38");
+    background-position: 50% 50%;
+  }
+  .u-block-6fa2-2 {
+    min-height: 555px;
+  }
+  .u-block-6fa2-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6fa2-4 {
+    margin-top: 410px;
+    margin-right: -17px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-6fa2-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/1440x930_PSC-IR-Carousel_Semiconductor2.jpg?rand=7c38");
+    background-position: 50% 50%;
+  }
+  .u-block-6fa2-2 {
+    min-height: 425px;
+  }
+  .u-block-6fa2-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6fa2-4 {
+    margin-top: 410px;
+    margin-right: -17px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-6fa2-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/1440x930_PSC-IR-Carousel_Semiconductor2.jpg?rand=7c38");
+    background-position: 50% 50%;
+  }
+  .u-block-6fa2-2 {
+    min-height: 319px;
+  }
+  .u-block-6fa2-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6fa2-4 {
+    margin-top: 410px;
+    margin-right: -17px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-6fa2-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/1440x930_PSC-IR-Carousel_Semiconductor2.jpg?rand=7c38");
+    background-position: 50% 50%;
+  }
+  .u-block-6fa2-2 {
+    min-height: 201px;
+  }
+  .u-block-6fa2-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6fa2-4 {
+    margin-top: 410px;
+    margin-right: -17px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style></section><section class="u-clearfix u-image u-block-2f35-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-0c7a" data-source="Blank" data-id="2f35" data-image-width="1400" data-image-height="752">
+  <div class="u-clearfix u-sheet u-block-2f35-2"><h1 class="u-text u-text-body-alt-color u-text-default u-block-2f35-3">Methodology</h1><p class="u-text u-text-palette-4-base u-block-2f35-4">​<span style="font-size: 1.25rem;">​I</span><span style="font-size: 1.25rem;">mage Acquisition:<br>Performing image acquisition in image processing is always first step in workflow sequence. There are various ways to acquire to images such as with the help of camera or scanner.<br>Image Preprocessing:<br>&nbsp;The main goal of preprocessing is to enhance the visual appearance of images. It involves correction of distortion, degradation and noise introduced during imaging process.</span></p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-2f35-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/69AbiLL7sEQ7XP6N5X65Dg.png?rand=53ea");
+    background-position: 50% 50%;
+  }
+  .u-block-2f35-2 {
+    min-height: 813px;
+  }
+  .u-block-2f35-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-2f35-4 {
+    margin-top: 483px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 59px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-2f35-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/69AbiLL7sEQ7XP6N5X65Dg.png?rand=53ea");
+    background-position: 50% 50%;
+  }
+  .u-block-2f35-2 {
+    min-height: 670px;
+  }
+  .u-block-2f35-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-2f35-4 {
+    margin-top: 483px;
+    margin-right: 0;
+    margin-bottom: 59px;
+    margin-left: -50px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-2f35-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/69AbiLL7sEQ7XP6N5X65Dg.png?rand=53ea");
+    background-position: 50% 50%;
+  }
+  .u-block-2f35-2 {
+    min-height: 513px;
+  }
+  .u-block-2f35-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-2f35-4 {
+    margin-top: 483px;
+    margin-right: 0;
+    margin-bottom: 59px;
+    margin-left: -50px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-2f35-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/69AbiLL7sEQ7XP6N5X65Dg.png?rand=53ea");
+    background-position: 50% 50%;
+  }
+  .u-block-2f35-2 {
+    min-height: 385px;
+  }
+  .u-block-2f35-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-2f35-4 {
+    margin-top: 483px;
+    margin-right: 0;
+    margin-bottom: 59px;
+    margin-left: -50px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-2f35-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/69AbiLL7sEQ7XP6N5X65Dg.png?rand=53ea");
+    background-position: 50% 50%;
+  }
+  .u-block-2f35-2 {
+    min-height: 242px;
+  }
+  .u-block-2f35-3 {
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-2f35-4 {
+    margin-top: 483px;
+    margin-right: 0;
+    margin-bottom: 59px;
+    margin-left: -50px;
+  }
+}</style></section><section class="u-clearfix u-image u-block-9814-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-3018" data-source="Blank" data-id="9814" data-image-width="1400" data-image-height="933">
+  <div class="u-clearfix u-sheet u-block-9814-2"><p class="u-text u-text-default u-text-palette-5-base u-block-9814-3">F​eature extraction<br>Feature extraction is a special form of dimensional reduction. Transforming the input data into a reduced representation of set of features is called as feature extraction.<br>Classification<br>Image classification analyses the numerical properties of various image features and organizes data into categories.</p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-9814-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/hnYD7Nw7lI_f9Ui3SIUCfA.jpeg?rand=1609");
+    background-position: 50% 50%;
+  }
+  .u-block-9814-2 {
+    min-height: 650px;
+  }
+  .u-block-9814-3 {
+    font-size: 1.25rem;
+    margin-top: 473px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-9814-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/hnYD7Nw7lI_f9Ui3SIUCfA.jpeg?rand=1609");
+    background-position: 50% 50%;
+  }
+  .u-block-9814-2 {
+    min-height: 536px;
+  }
+  .u-block-9814-3 {
+    font-size: 1.25rem;
+    margin-top: 473px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-9814-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/hnYD7Nw7lI_f9Ui3SIUCfA.jpeg?rand=1609");
+    background-position: 50% 50%;
+  }
+  .u-block-9814-2 {
+    min-height: 411px;
+  }
+  .u-block-9814-3 {
+    font-size: 1.25rem;
+    margin-top: 473px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-9814-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/hnYD7Nw7lI_f9Ui3SIUCfA.jpeg?rand=1609");
+    background-position: 50% 50%;
+  }
+  .u-block-9814-2 {
+    min-height: 308px;
+  }
+  .u-block-9814-3 {
+    font-size: 1.25rem;
+    margin-top: 473px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-9814-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/hnYD7Nw7lI_f9Ui3SIUCfA.jpeg?rand=1609");
+    background-position: 50% 50%;
+  }
+  .u-block-9814-2 {
+    min-height: 194px;
+  }
+  .u-block-9814-3 {
+    font-size: 1.25rem;
+    margin-top: 473px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+}</style></section><section class="u-clearfix u-image u-block-9fa6-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-4b35" data-source="Blank" data-id="9fa6" data-image-width="1320" data-image-height="880">
+  <div class="u-clearfix u-sheet u-block-9fa6-2"><h1 class="u-text u-text-default u-block-9fa6-3">Successes &amp; Failures</h1><p class="u-text u-block-9fa6-4">​<span style="font-size: 1.25rem;">​S</span><span style="font-size: 1.25rem;">uccess<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It is able to identify both the country of origin and denomination of a given bank note.<br>​Failure<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It wont be able to identify all the countries and denominations of a given bank note</span>.</p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-9fa6-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/psychology-success-failure-light-bulb-feature_1320W_JR-1.png?rand=878d");
+    background-position: 50% 50%;
+  }
+  .u-block-9fa6-2 {
+    min-height: 724px;
+  }
+  .u-block-9fa6-3 {
+    margin-top: 27px;
+    margin-right: 315px;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+  .u-block-9fa6-4 {
+    margin-top: 437px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-9fa6-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/psychology-success-failure-light-bulb-feature_1320W_JR-1.png?rand=878d");
+    background-position: 50% 50%;
+  }
+  .u-block-9fa6-2 {
+    min-height: 597px;
+  }
+  .u-block-9fa6-3 {
+    margin-top: 27px;
+    margin-right: 259px;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+  .u-block-9fa6-4 {
+    margin-top: 437px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-9fa6-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/psychology-success-failure-light-bulb-feature_1320W_JR-1.png?rand=878d");
+    background-position: 50% 50%;
+  }
+  .u-block-9fa6-2 {
+    min-height: 457px;
+  }
+  .u-block-9fa6-3 {
+    margin-top: 27px;
+    margin-right: 198px;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+  .u-block-9fa6-4 {
+    margin-top: 437px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-9fa6-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/psychology-success-failure-light-bulb-feature_1320W_JR-1.png?rand=878d");
+    background-position: 50% 50%;
+  }
+  .u-block-9fa6-2 {
+    min-height: 343px;
+  }
+  .u-block-9fa6-3 {
+    margin-top: 27px;
+    margin-right: 149px;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+  .u-block-9fa6-4 {
+    margin-top: 437px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-9fa6-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/psychology-success-failure-light-bulb-feature_1320W_JR-1.png?rand=878d");
+    background-position: 50% 50%;
+  }
+  .u-block-9fa6-2 {
+    min-height: 216px;
+  }
+  .u-block-9fa6-3 {
+    margin-top: 27px;
+    margin-right: 94px;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+  .u-block-9fa6-4 {
+    margin-top: 437px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style></section><section class="u-clearfix u-image u-block-fb06-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-e09b" data-source="Blank" data-id="fb06" data-image-width="1200" data-image-height="800">
+  <div class="u-clearfix u-sheet u-block-fb06-2"><h1 class="u-text u-text-default u-block-fb06-3">Challenges</h1><p class="u-text u-block-fb06-4">​<span style="font-size: 1.25rem;">​It</span><span style="font-size: 1.25rem;">&nbsp;is very difficult to count different denomination notes in a bunch. This project proposes an&nbsp;image processing&nbsp;technique for paper&nbsp;currency recognition&nbsp;and we propose a system for automated currency recognition using image processing techniques. The proposed method can be used for recognizing both the country or origin as well as the denomination or value of a given banknote. Only paper currencies have been considered. This method works by first identifying the country of origin using certain predefined areas of interest, and then extracting the denomination value using characteristics such as size, color, or text on the note, depending on how much the notes within the same country differ. We have considered 20 of the most traded currencies, as well as their denominations. Our system is able to accuratel</span><br></p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-fb06-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-vote-2500-1200x800.jpg?rand=aeb5");
+    background-position: 50% 50%;
+  }
+  .u-block-fb06-2 {
+    min-height: 803px;
+  }
+  .u-block-fb06-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-fb06-4 {
+    margin-top: 307px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-fb06-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-vote-2500-1200x800.jpg?rand=aeb5");
+    background-position: 50% 50%;
+  }
+  .u-block-fb06-2 {
+    min-height: 662px;
+  }
+  .u-block-fb06-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-fb06-4 {
+    margin-top: 307px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-fb06-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-vote-2500-1200x800.jpg?rand=aeb5");
+    background-position: 50% 50%;
+  }
+  .u-block-fb06-2 {
+    min-height: 507px;
+  }
+  .u-block-fb06-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-fb06-4 {
+    margin-top: 307px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-fb06-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-vote-2500-1200x800.jpg?rand=aeb5");
+    background-position: 50% 50%;
+  }
+  .u-block-fb06-2 {
+    min-height: 380px;
+  }
+  .u-block-fb06-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-fb06-4 {
+    margin-top: 307px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-fb06-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-vote-2500-1200x800.jpg?rand=aeb5");
+    background-position: 50% 50%;
+  }
+  .u-block-fb06-2 {
+    min-height: 239px;
+  }
+  .u-block-fb06-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-fb06-4 {
+    margin-top: 307px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style></section><section class="u-clearfix u-image u-block-abb4-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-b35c" data-source="Blank" data-id="abb4" data-image-width="1470" data-image-height="980">
+  <div class="u-clearfix u-sheet u-block-abb4-2"><h1 class="u-text u-text-default u-block-abb4-3">Conclusion &amp; Future Scope</h1><p class="u-text u-block-abb4-4">​In<span style="font-size: 1.25rem;"> conclusion, we have designed a system that accurately identifies both the country of origin and the denomination of a given banknote. Our system currently supports twenty of the most common currencies, but can easily be extended to more dountries based on the method we have previously described. When compared with the crude algorithm of pixel by pixel comparison, our algorithm is considerably more accurate, and takes less time. We have thus learned that our proposed algorithm is able to identify currency and denomination in average of 5.3 seconds, which is a considerable improvement over the crude algorithm. However, our proposed system only considers a limited number of currencies. There are 180+ currencies that can be included in the system, and we have chosen to only do for 20 of the most common ones. Also, the system should be effective in identifying notes that are mutilated. Our system is not effective under this consideration. This can be worked on in the future.&nbsp;</span></p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-abb4-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/or-resolution-reached-after-gambling-for-luck-human-future-chosen-by-chance-the-possibility-for-business-development-vector.jpg?rand=4528");
+    background-position: 50% 50%;
+  }
+  .u-block-abb4-2 {
+    min-height: 743px;
+  }
+  .u-block-abb4-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-abb4-4 {
+    margin-top: 377px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-abb4-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/or-resolution-reached-after-gambling-for-luck-human-future-chosen-by-chance-the-possibility-for-business-development-vector.jpg?rand=4528");
+    background-position: 50% 50%;
+  }
+  .u-block-abb4-2 {
+    min-height: 613px;
+  }
+  .u-block-abb4-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-abb4-4 {
+    margin-top: 377px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-abb4-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/or-resolution-reached-after-gambling-for-luck-human-future-chosen-by-chance-the-possibility-for-business-development-vector.jpg?rand=4528");
+    background-position: 50% 50%;
+  }
+  .u-block-abb4-2 {
+    min-height: 470px;
+  }
+  .u-block-abb4-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-abb4-4 {
+    margin-top: 377px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-abb4-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/or-resolution-reached-after-gambling-for-luck-human-future-chosen-by-chance-the-possibility-for-business-development-vector.jpg?rand=4528");
+    background-position: 50% 50%;
+  }
+  .u-block-abb4-2 {
+    min-height: 353px;
+  }
+  .u-block-abb4-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-abb4-4 {
+    margin-top: 377px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-abb4-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/or-resolution-reached-after-gambling-for-luck-human-future-chosen-by-chance-the-possibility-for-business-development-vector.jpg?rand=4528");
+    background-position: 50% 50%;
+  }
+  .u-block-abb4-2 {
+    min-height: 222px;
+  }
+  .u-block-abb4-3 {
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-abb4-4 {
+    margin-top: 377px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style></section><section class="u-clearfix u-image u-block-5c7a-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-3e43" data-source="Blank" data-id="5c7a" data-image-width="1200" data-image-height="800">
+  <div class="u-clearfix u-sheet u-block-5c7a-2"><h1 class="u-text u-block-5c7a-3">Quiz</h1><p class="u-text u-text-default u-block-5c7a-4">1) Which of the following studies various techniques to classify patterns?<br>A. Image Processing<br>B. Photogrammetry<br>C. Image Recognition<br>D. Pattern Recognition<br><br>2)&nbsp;&nbsp;Low-level vision includes process image for feature extraction.<br>A. Yes<br>B. No<br>C. Can be yes or no<br>D. Can not say<br><br>3) Which of the following is an Applications of Computer Vision?<br>A. Robotics<br>B. Medicine<br>C. Security<br>D. All of the above<br><br>4) The input and output of image processing are?<br>A. signal and image<br>B. signal only<br>C. image only<br>D. depends on input<br><br>5)&nbsp;&nbsp;Number of gray scale values that are possible with 8 bit code is _____.<br>answer choices<br><br>A. 32 shades<br>B. 16 shades<br>C. 64 shades<br>D. 256 shades</p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-5c7a-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/Logo-Quiz-Questions-And-Answers.jpg?rand=1942");
+    background-position: 50% 50%;
+  }
+  .u-block-5c7a-2 {
+    min-height: 1555px;
+  }
+  .u-block-5c7a-3 {
+    margin-top: 20px;
+    margin-right: 449px;
+    margin-bottom: 0;
+    margin-left: 522px;
+  }
+  .u-block-5c7a-4 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-right: 449px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-5c7a-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/Logo-Quiz-Questions-And-Answers.jpg?rand=1942");
+    background-position: 50% 50%;
+  }
+  .u-block-5c7a-2 {
+    min-height: 1282px;
+  }
+  .u-block-5c7a-3 {
+    margin-top: 20px;
+    margin-right: 349px;
+    margin-bottom: 0;
+    margin-left: 422px;
+  }
+  .u-block-5c7a-4 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-right: 349px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-5c7a-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/Logo-Quiz-Questions-And-Answers.jpg?rand=1942");
+    background-position: 50% 50%;
+  }
+  .u-block-5c7a-2 {
+    min-height: 982px;
+  }
+  .u-block-5c7a-3 {
+    margin-top: 20px;
+    margin-right: 239px;
+    margin-bottom: 0;
+    margin-left: 312px;
+  }
+  .u-block-5c7a-4 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-right: 239px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-5c7a-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/Logo-Quiz-Questions-And-Answers.jpg?rand=1942");
+    background-position: 50% 50%;
+  }
+  .u-block-5c7a-2 {
+    min-height: 737px;
+  }
+  .u-block-5c7a-3 {
+    margin-top: 20px;
+    margin-right: 149px;
+    margin-bottom: 0;
+    margin-left: 222px;
+  }
+  .u-block-5c7a-4 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-right: 149px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-5c7a-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/Logo-Quiz-Questions-And-Answers.jpg?rand=1942");
+    background-position: 50% 50%;
+  }
+  .u-block-5c7a-2 {
+    min-height: 464px;
+  }
+  .u-block-5c7a-3 {
+    margin-top: 20px;
+    margin-right: 49px;
+    margin-bottom: 0;
+    margin-left: 122px;
+  }
+  .u-block-5c7a-4 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-right: 49px;
+    margin-bottom: 60px;
+    margin-left: auto;
+  }
+}</style></section><section class="u-clearfix u-image u-block-4a45-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-bd26" data-source="Blank" data-id="4a45" data-image-width="1800" data-image-height="1013">
+  <div class="u-clearfix u-sheet u-block-4a45-2"><h1 class="u-text u-text-default u-block-4a45-3">Reference</h1><p class="u-text u-block-4a45-4">​D<span style="font-size: 1.25rem;">oush, Iyad Abu., et al. "Currency recognition using a smartphone: Comparison between color SIFT and gray scale SIFT algorithms." Journal of King Saud University-Computer and Information Sciences 29.4 484-492 , 2017.<br>Fattouh, AM Ali. "A non-parametric approach for paper currency recognition." International Journal of Computer Science and Software Engineering vol. 4, no. 5, pp. 121-125, 2015.</span></p></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-4a45-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-165813980-1.jpg?rand=fb33");
+    background-position: 50% 50%;
+  }
+  .u-block-4a45-2 {
+    min-height: 500px;
+  }
+  .u-block-4a45-3 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-4a45-4 {
+    margin-top: 233px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-4a45-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-165813980-1.jpg?rand=fb33");
+    background-position: 50% 50%;
+  }
+  .u-block-4a45-2 {
+    min-height: 412px;
+  }
+  .u-block-4a45-3 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-4a45-4 {
+    margin-top: 233px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-4a45-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-165813980-1.jpg?rand=fb33");
+    background-position: 50% 50%;
+  }
+  .u-block-4a45-2 {
+    min-height: 316px;
+  }
+  .u-block-4a45-3 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-4a45-4 {
+    margin-top: 233px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-4a45-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-165813980-1.jpg?rand=fb33");
+    background-position: 50% 50%;
+  }
+  .u-block-4a45-2 {
+    min-height: 237px;
+  }
+  .u-block-4a45-3 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-4a45-4 {
+    margin-top: 233px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-4a45-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_2865118/images/iStock-165813980-1.jpg?rand=fb33");
+    background-position: 50% 50%;
+  }
+  .u-block-4a45-2 {
+    min-height: 149px;
+  }
+  .u-block-4a45-3 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-4a45-4 {
+    margin-top: 233px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}</style></section>
+</body></html>
